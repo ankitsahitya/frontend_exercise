@@ -1,6 +1,7 @@
 var count = 0;
 var index = 0;
 var timer;
+var height = 0;
 carousel();
 function carousel() {
 	clearTimeout(timer);
@@ -35,6 +36,9 @@ function openNav() {
   }
 }
 function openBlock(blockName){
+	$("#welcome").attr("style","display:none;");
+	$("#welcome-links").attr("style","display:none;");
+	$("#container").attr("style","display:block;");
 	if(blockName == "home" || blockName == "example"){
 		$("#right-block").attr("style", "display:block");
 	}
@@ -57,7 +61,7 @@ function openBlock(blockName){
 function glow(){
 	if(count%2 == 0){
 		$("#switch").attr("style","background-color:red");
-		$("#bulb").attr("src","assets/images/bulbon");
+		$("#bulb").attr("src","assets/images/bulbon.png");
 		$("#switch").text("Switch on");
 		count++;
 	}
@@ -87,4 +91,17 @@ function addComment(commenter,comment){
   $("#comments").append(row);
   i++;
   closeModel();
+}
+function showImage(){
+	console.log(height++);
+	if(height>100){
+		$("#welcome-links img").attr("style","display:block;");
+	}
+	if(height>130){
+		$("#container").attr("style","display:block;");
+	}
+	if(height>250){
+		$("#welcome").attr("style","display:none;");
+		$("#welcome-links").attr("style","display:none;");
+	}
 }

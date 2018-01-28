@@ -8,7 +8,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="assets/js/index.js"></script>
 	</head>
-	<body>
+	<body onscroll="showImage()">
 		<div id="modal">
 		  <div class="modal-content">
 		    <span class="close" onclick="closeModel()">&times;</span>
@@ -35,10 +35,23 @@
 			  </form>
 		  </div>
 		</div>
-		<div id="container">
+		<div id="welcome">
+			<h1><span>Ankit</span>Sahitya</h1>
+		</div>
+		<div id="welcome-links">
+			<div style="width: 100%;overflow: hidden;">
+				<img id="img-introduction" src="assets/images/introduction.png" onclick="openBlock('home')">
+				<img id="img-example" src="assets/images/example.png" onclick="openBlock('example')">
+			</div>
+			<div style="width: 100%;overflow: hidden;">
+				<img id="img-image-effect" src="assets/images/image_effect.png" onclick="openBlock('image-effect')">
+				<img id="img-contact-us" src="assets/images/contact_us.png" onclick="openBlock('contact-us')">
+			</div>
+		</div>
+		<div id="container" style="display: none;">
 			<div id="header">
 				<div id="logo">
-					<h1><span>Company</span>Name</h1>
+					<h1><span>Ankit</span>Sahitya</h1>
 				</div>
 				<div id="social-media">
 					<i class="fa fa-facebook"></i>

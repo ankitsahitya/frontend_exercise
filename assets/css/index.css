@@ -2,11 +2,78 @@ body{
 	background-image: url("../images/body.png");
 	padding-top: 0;
   color: #999;
+  height:200%;
   text-align: left;
   margin: 0;
   font-size:.9rem;
   font-weight: 500;
   box-sizing: border-box;
+  overflow:scroll;
+  background-attachment: fixed;
+  background-position: center;
+}
+#welcome{
+  height:12rem;
+  padding:3rem;
+  text-align: center;
+  padding-top:30%;
+}
+#welcome-links{
+  height:50rem;
+  padding:3rem;
+  text-align: center;
+  padding-top:20%;
+}
+#welcome h1{
+  color: #F87B27;
+  font-size: 4rem;
+  line-height: 1.4rem;
+  letter-spacing: -0.1rem;
+  font-weight: 500;
+  margin: 50px;
+  animation-name: zoom;
+  animation-duration: 2s;
+}
+@keyframes zoom{
+  from{
+    font-size:0;
+  }
+  to{
+    font-size:4rem;
+  }
+}
+#welcome h1 span{
+  color: #777777;
+}
+#welcome-links img{
+  display: none;
+  width:40%;
+  border:1rem solid #bbb;
+  margin:5px;
+}
+#img-introduction{
+  float:left;
+  animation: zoomimage 2s;
+}
+#img-image-effect{
+  float:left;
+  animation: zoomimage 2s;
+}
+#img-example{
+  float:right;
+  animation: zoomimage 2s;
+}
+#img-contact-us{
+  float:right;
+  animation: zoomimage 2s;
+}
+@keyframes zoomimage{
+  from{
+    width:0;
+  }
+  to{
+    width:40%;
+  }
 }
 a{
 	color:#F87B27;
@@ -197,7 +264,8 @@ fieldset{
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; 
+  transition: border-color ease-in-out 0.15s,
+  box-shadow ease-in-out 0.15s; 
 }
 .btn {
   display: inline-block;
@@ -211,7 +279,9 @@ fieldset{
   font-size: 1rem;
   line-height: 1.9;
   border-radius: 0;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
+  transition: background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out,
+  box-shadow 0.15s ease-in-out; 
 }
 .btn-primary {
   color: #fff;
@@ -860,23 +930,9 @@ footer h4{
   position: relative;
   text-align: center;
 }
-.animate-left{
-  position:relative;
-  animation:animateleft 0.4s
-}
-@keyframes animateleft{
-  from{
-    left:-300px;
-    opacity:0
-  } 
-  to{
-    left:0;
-    opacity:1
-  }
-}
 .animate-right{
   position:relative;
-  animation:animateright 0.4s
+  animation:animateright 1s;
 }
 @keyframes animateright{
   from{

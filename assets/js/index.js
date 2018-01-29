@@ -75,14 +75,14 @@ function glow(){
 popup = function() {
 	$("#commenter").val(null);
 	$("#comment").val(null);
-  $("#modal").attr("style","display:block;");
+  $("#feedback-form").attr("style","display:block;");
 }
 closeModel = function() {
-  $("#modal").attr("style","display:none;");
+  $("#feedback-form").attr("style","display:none;");
 }
 window.onclick = function(event) {
   if (event.target == modal) {
-    $("#modal").attr("style","display:none;");
+    $("#feedback-form").attr("style","display:none;");
   }
 }
 var i=1;
